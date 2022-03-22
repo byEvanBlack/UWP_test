@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using Microsoft.Toolkit.Uwp.Notifications;
-using System.Windows;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Unity;
+using Microsoft.AppCenter.Unity.Analytics;
+using Microsoft.AppCenter.Unity.Crashes;
 
 
 
 public class Test : MonoBehaviour
 {
+    void Start()
+    {
+        //Type[] serviceArray = { typeof(Analytics), typeof(Crashes) };
+        //AppCenter.StartFromLibrary(serviceArray);
+    }
+
     public void OnClick()
     {
         Debug.Log("Alert");

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DLL.ToastLibrary;
 
 
 
@@ -9,7 +10,10 @@ public class Test : MonoBehaviour
     public void OnClick()
     {
 #if ENABLE_WINMD_SUPPORT
-        DLL.ToastLibrary.ToastGenerator generator = new DLL.ToastLibrary.ToastGenerator();
+        ToastGenerator generator = new ToastGenerator();
+        generator.ShowToast();
+#else
+        ToastGenerator generator = new ToastGenerator();
         generator.ShowToast();
 #endif
     }

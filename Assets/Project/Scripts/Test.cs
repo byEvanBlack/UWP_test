@@ -10,6 +10,8 @@ public class Test : MonoBehaviour
 {
     public void OnClick()
     {
+        string path = "file:///C:/Working/RnD/UWP_test/Assets/Project/Resources/";
+
         List<ToastText> binding = new List<ToastText>();
         binding.Add(new ToastText("TITLE", ToastTextType.TITLE));
         binding.Add(new ToastText("text1", ToastTextType.NORMAL));
@@ -17,10 +19,10 @@ public class Test : MonoBehaviour
         binding.Add(new ToastText("attribution", ToastTextType.ATTRIBUTION));
 
         List<ToastImage> image = new List<ToastImage>();
-        image.Add(new ToastImage("https://picsum.photos/364/180?image=200", ToastImageType.HERO));
-        image.Add(new ToastImage("https://picsum.photos/48?image=400", ToastImageType.SQUARE_LOGO));
-        //image.Add(new ToastImage("https://picsum.photos/48?image=400", ToastImageType.CIRCLE_LOGO));
-        image.Add(new ToastImage("https://picsum.photos/360/202?image=600", ToastImageType.INLINE));
+        image.Add(new ToastImage(path + "img_hero.png", ToastImageType.HERO));
+        //image.Add(new ToastImage(path + "img_logo.png", ToastImageType.SQUARE_LOGO));
+        image.Add(new ToastImage(path + "img_logo.png", ToastImageType.CIRCLE_LOGO));
+        image.Add(new ToastImage(path + "img_inline.png", ToastImageType.INLINE));
 
         ToastGenerator.GenerateToast(binding, image, null);
     }

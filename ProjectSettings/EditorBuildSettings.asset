@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/UWPCoreTest/Scenes/CoreTest.unity
+    guid: 2398341b4c0adcd4ca0eeb7c7cb730cc
   - enabled: 1
     path: Assets/Project/Scenes/WindowsPlatform.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
